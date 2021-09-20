@@ -1,0 +1,28 @@
+{
+  "name": "premium-user-service",
+  "version": "1.0.0",
+  "description": "Microservice to serve API related with creating premium user (payments, updating user database. etc.)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ardiansyakh/premium-user-service.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ardiansyakh/premium-user-service/issues"
+  },
+  "homepage": "https://github.com/ardiansyakh/premium-user-service#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "husky": "^7.0.2",
+    "jest": "^27.2.0",
+    "prettier": "2.4.1"
+  }
+}
