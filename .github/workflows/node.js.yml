@@ -38,10 +38,10 @@ jobs:
           run: npm install -g sequelize-cli
         - name: Do migration
           run: sequelize db:migrate --env test
-        - name: Do seeding
-          run: sequelize db:seed:all --env test
-        - name: Creating jwt secret file mock up
-          run: echo "JWT_SECRET=ABCD" > .env
+        # - name: Do seeding
+        #   run: sequelize db:seed:all --env test
+        # - name: Creating jwt secret file mock up
+        #   run: echo "JWT_SECRET=ABCD" > .env
         -   run: npm run build --if-present
         -   name: Run testing
             run: npm test
