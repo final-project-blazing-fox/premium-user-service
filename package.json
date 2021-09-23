@@ -4,8 +4,10 @@
   "description": "Microservice to serve API related with creating premium user (payments, updating user database. etc.)",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "prepare": "husky install"
+    "test": "jest --coverage",
+    "prepare": "husky install",
+    "start": "node bin/www",
+    "dev": "nodemon bin/www"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,14 @@
     "prettier": "2.4.1"
   },
   "dependencies": {
-    "pretty-quick": "^3.1.1"
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "midtrans-client": "^1.2.5",
+    "pg": "^8.7.1",
+    "pretty-quick": "^3.1.1",
+    "sequelize": "^6.6.5",
+    "strong-params": "^1.0.0",
+    "supertest": "^6.1.6"
   }
 }
