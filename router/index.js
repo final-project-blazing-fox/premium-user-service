@@ -1,6 +1,9 @@
 const router = require('express').Router()
 const UserPremium = require('../controller')
 
-router.use('/user/premium', UserPremium.register)
+router.get("/", (req, res, next) => {
+    res.send("user premium service");
+});
 
+router.post('/user/premium', UserPremium.register)
 module.exports = router
