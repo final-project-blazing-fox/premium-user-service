@@ -4,9 +4,7 @@ class UserPremium {
     static register = async (req, res, next) => {
         try {
             let params = req.parameters
-            console.log(params);
             params = params.permit({user: ['full_name', 'email', 'phone'] }, 'price').value()
-            console.log(params);
             const { price, user } = params
             const transaction = await Transaction.create({user_id: user.id})
             // Create Snap API instance
