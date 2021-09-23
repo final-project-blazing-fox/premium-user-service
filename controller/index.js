@@ -33,7 +33,7 @@ class UserPremium {
                 // transaction token
                 const transactionToken = transaction.token;
                 const redirect_url = transaction.redirect_url
-                res.status(200).json({transactionToken, redirect_url})
+                res.status(201).json({transactionToken, redirect_url})
             })
             .catch(err=>{
                 next(err);

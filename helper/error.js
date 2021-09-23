@@ -4,15 +4,15 @@ const errHandler = (err, req, res, next)=>{
     switch(err.name){
         case'SequelizeValidationError' : 
             statusCode = 401
-            errorMessage = {message: err.errors[0].message}
+            errorMessage = {code: 401, message: err.errors[0].message}
             break
         case 'ParameterMissingError' :
             statusCode = 400
-            errorMessage = {message: err.message}
+            errorMessage = {code: 400, message: err.message}
             break
         default :
             statusCode = 500
-            errorMessage = {message: 'Internal Server Error'}
+            errorMessage = {code: 500, message: 'Internal Server Error'}
             break
     }
 
