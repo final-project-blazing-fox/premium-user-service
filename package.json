@@ -4,7 +4,7 @@
   "description": "Microservice to serve API related with creating premium user (payments, updating user database. etc.)",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest --coverage --force-exit --detectOpenHandles",
     "prepare": "husky install",
     "start": "node bin/www",
     "dev": "nodemon bin/www"
