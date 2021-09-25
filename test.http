@@ -1,0 +1,13 @@
+@host=http://localhost:3000
+
+POST {{host}}/user/premium
+Content-Type: application/json
+
+{
+    "price": 100000,
+    "user": {
+        "full_name": "test",
+        "email": "test@mail.com",
+        "phone": "0857000000"
+    }
+}
