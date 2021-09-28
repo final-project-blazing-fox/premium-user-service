@@ -24,6 +24,7 @@ describe("POST register premium user || should be status 201", () => {
       .send({
         price: 100000,
         user: {
+          id: 1,
           full_name: "test",
           email: "test@mail.com",
           phone: "0857000000",
