@@ -55,11 +55,11 @@ class UserPremium {
                 transaction.payment_method = `${payment_type}_${bank}`
                 await transaction.save()
                 await axios({
-                    url: `https://final-project-user-profile.herokuapp.com/user/${transaction.user_id}/upgrade`,
+                    url: `${process.env.URL_USER}/user/${transaction.user_id}/upgrade`,
                     method: 'patch',
                     headers: {
                         'Content-Type': 'application/json',
-                        'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MzIyOTEwMTV9.fIuVgHTgDl-5eoEPLwTrJhgYcjCIz6uUCdG6DxcGsj8'
+                        'access_token': process.env.TOKEN_ADMIN
                     }
                 })
                 .then(({ data }) => {
