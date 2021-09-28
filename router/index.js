@@ -6,4 +6,5 @@ router.get('/', (req, res,) => {
 });
 
 router.post('/user/premium', UserPremium.register)
+router.post('/notification', UserPremium.updatePayment)
 module.exports = router
